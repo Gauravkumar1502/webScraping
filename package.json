@@ -1,0 +1,26 @@
+{
+  "name": "webscraping",
+  "version": "1.0.0",
+  "description": "webScraping",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "webScraping"
+  },
+  "keywords": [
+    "webScraping",
+    "Code",
+    "website",
+    "Trading"
+  ],
+  "author": "Gaurav",
+  "license": "ISC",
+  "dependencies": {
+    "csv-writer": "^1.6.0",
+    "isomorphic-fetch": "^3.0.0",
+    "jsdom": "^16.6.0"
+  }
+}
