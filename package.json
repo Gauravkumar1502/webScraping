@@ -19,6 +19,7 @@
   "author": "Gaurav",
   "license": "ISC",
   "dependencies": {
+    "csv-parser": "^3.0.0",
     "csv-writer": "^1.6.0",
     "isomorphic-fetch": "^3.0.0",
     "jsdom": "^16.6.0"

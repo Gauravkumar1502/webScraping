@@ -5,10 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>Gaurav</h1>
+        <h1>Fetch Financial data of Stocks from Yahoo Finance..</h1>
+    
     <script>
+        getData();
+        async function getData(){
+            const response =await fetch('data.csv');
+            const body=document.body;
+
+            var main_div=document.createElement("div");
+            main_div.className="cards";
+            const data=await response.text();
+            
+            //Table Headings
+            const tableHead =data.split('\n').splice(0,1);
+            const headRow=tableHead[0].split(',');
+
+            var counter=0;
+            const rows =data.split('\n').splice(1);
+            rows.forEach(elt=>{
+                const row=elt.split(',');
+                var div0=document.createElement("div");
+                div0.className="cards__item";
+                counter=0;
+                row.forEach(element=>{                    
+                    var div1=document.createElement("div");
+                    div1.className="div1";
+                    div1.innerHTML="<b>"+headRow[counter++] +" : </b>"+element;
+                    div0.appendChild(div1);      
+                })
+                main_div.appendChild(div0);
+            });
+            body.appendChild(main_div);
+        }
     </script>
-</body>
 </html>
